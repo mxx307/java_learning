@@ -1,9 +1,7 @@
 package 第十一章;
 
 //11-2
-public class Circle {
-    private String color;
-    private boolean filled;
+public class Circle extends GeometricObject {
     private double radius;
 
     public Circle() {
@@ -16,8 +14,8 @@ public class Circle {
 
     public Circle(double radius, String color, boolean filled) {
         this.radius = radius;
-        this.color = color;
-        this.filled = filled;
+        setColor(color);
+        setFilled(filled);
     }
 
     public double getRadius() {
@@ -26,10 +24,6 @@ public class Circle {
 
     public void setRadius(double radius) {
         this.radius = radius;
-    }
-
-    public String getColor(){
-        return this.color;
     }
 
     public double getArea() {
@@ -45,6 +39,6 @@ public class Circle {
     }
 
     public void printCircle() {
-        System.out.println("The circle is created " + new GeometricObject().getDateCreated() + " and the radius is " + radius);
+        System.out.println("The circle is created " + getDateCreated() + " and the radius is " + radius);
     }
 }
